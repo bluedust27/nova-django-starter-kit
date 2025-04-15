@@ -1,0 +1,8 @@
+feature_flags:
+  auth_enabled: false
+
+logging:
+  level: INFO
+  log_file: app.log
+  enable_console: True
+  enable_file: True

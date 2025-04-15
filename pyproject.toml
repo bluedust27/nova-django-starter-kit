@@ -1,0 +1,30 @@
+[project]
+name = "testvista"
+version = "0.1.0"
+description = "Lightweight Django app to visualize and manage scheduled JMeter tests, with Docker-ready deployment."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "bandit>=1.8.3",
+    "black>=25.1.0",
+    "crispy-bootstrap5>=2025.4",
+    "detect-secrets>=1.5.0",
+    "django==5.2",
+    "django-crispy-forms>=2.3",
+    "pre-commit>=4.2.0",
+    "psycopg2-binary>=2.9.10",
+    "ruff>=0.11.5",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py312']
+skip-string-normalization = false
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+exclude = ["migrations"]
+
+[tool.bandit]
+skips = ["B101"]  # Optional: skip assert warnings
